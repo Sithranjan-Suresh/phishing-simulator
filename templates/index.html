@@ -1,28 +1,54 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Phishing Simulator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Attack Simulator</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-900 font-sans">
 
-  <div class="max-w-3xl mx-auto p-8">
-    <h1 class="text-4xl font-bold mb-4">🎣 Phishing Attack Simulator</h1>
+  <!-- Header -->
+  <header class="bg-white shadow p-4 sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">Phishing Attack Simulator</h1>
+      <a href="https://github.com/Sithranjan-Suresh/phishing-simulator" target="_blank" class="text-sm text-blue-600 hover:underline">
+        View on GitHub →
+      </a>
+    </div>
+  </header>
 
-    <p class="mb-6 text-lg">
-      This is a simulated phishing attack environment built for educational purposes. It allows users to experience how phishing works without any risk.
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto p-8 mt-8 bg-white shadow-lg rounded-2xl">
+
+    <!-- Title -->
+    <h2 class="text-3xl font-bold mb-2 text-gray-800">Understand Phishing — The Safe Way</h2>
+    <p class="text-lg text-gray-600 mb-6">
+      Simulate how phishing attacks work and learn to defend against them — without harming anyone.
     </p>
 
-    <div class="bg-red-100 text-red-800 border-l-4 border-red-500 p-4 mb-6">
-      <strong>⚠️ Disclaimer:</strong> This tool is for ethical, educational, and personal learning use only. No real emails are sent, and no data is used maliciously. Do not deploy this publicly or use it to deceive real users.
+    <!-- Disclaimer -->
+    <div class="bg-red-100 text-red-800 border-l-4 border-red-500 p-4 mb-8 rounded">
+      <strong>⚠️ Ethical Use Only:</strong>
+      <p class="mt-1">
+        This tool is for educational and ethical testing purposes only. It does not send real emails or collect real data.
+      </p>
     </div>
 
-    <a href="/phishing-email" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
-      Start Simulation →
-    </a>
-  </div>
+    <!-- Call to Action -->
+    <div class="flex items-center space-x-4">
+      <a href="/phishing-email" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-medium transition">
+        Start Simulation →
+      </a>
+      <a href="#" class="text-sm text-gray-500 hover:underline">Learn how phishing works</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-center text-gray-400 text-sm">
+    © 2025 Phishing Simulator Project — Built for learning
+  </footer>
 
 </body>
 </html>
