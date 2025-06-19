@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inbox - Phishing Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <div class="max-w-xl mx-auto mt-10 bg-white p-6 shadow-lg rounded-xl">
+
+    <h1 class="text-2xl font-bold mb-4">📬 New Email Received</h1>
+
+    <div class="mb-4">
+      <p><strong>From:</strong> support@securebanking.com</p>
+      <p><strong>Subject:</strong> Unusual Login Attempt - Action Required</p>
+    </div>
+
+    <div class="border-t pt-4 space-y-4 text-gray-700">
+      <p>Dear Customer,</p>
+
+      <p>We've detected an unusual login attempt on your account. If this was not you, please verify your account immediately to avoid temporary suspension.</p>
+
+      <p>
+        <a href="/track-click?target=bank" class="text-blue-600 hover:underline font-semibold">
+          Verify your account now →
+        </a>
+      </p>
+
+      <p>Thank you,<br>The SecureBanking Team</p>
+    </div>
+
+    <div class="mt-6 text-sm text-gray-400 border-t pt-4">
+      ⚠️ This is a simulated email. No data is sent. Educational use only.
+    </div>
+
+  </div>
+
+</body>
+</html>
