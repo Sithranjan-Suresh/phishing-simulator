@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Credential Log</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-xl p-8 rounded-xl">
+    <h1 class="text-3xl font-bold text-red-600 mb-6">🛡️ Admin View: Captured Credentials</h1>
+    <p class="text-sm text-gray-500 mb-6">Educational use only. These credentials were entered during the simulated phishing attack.</p>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border border-gray-300 text-sm">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2 border">Username</th>
+            <th class="px-4 py-2 border">Password</th>
+            <th class="px-4 py-2 border">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for cred in credentials %}
+          <tr class="border-t">
+            <td class="px-4 py-2 border">{{ cred[0] }}</td>
+            <td class="px-4 py-2 border">{{ cred[1] }}</td>
+            <td class="px-4 py-2 border">{{ cred[2] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <a href="/" class="inline-block mt-6 text-blue-600 hover:underline">← Back to Home</a>
+  </div>
+
+</body>
+</html>

