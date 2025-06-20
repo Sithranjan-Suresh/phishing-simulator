@@ -6,7 +6,7 @@ This project helps users understand the full phishing attack chain — from rece
 
 
 ---
-**Watch the demo video**: [https://youtu.be/QcUGuFrTsMU](https://youtu.be/QcUGuFrTsMU)
+
 
 ## Features
 
@@ -115,6 +115,11 @@ Do not deploy this in production or use it to simulate attacks without full cons
 
 ---
 
+## Demo Video
+
+**Watch the demo video**: [https://youtu.be/QcUGuFrTsMU](https://youtu.be/QcUGuFrTsMU)
+
+---
 
 ## Contributions
 
