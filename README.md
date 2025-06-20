@@ -4,6 +4,7 @@ A full-stack cybersecurity training web application that simulates real-world ph
 
 This project helps users understand the full phishing attack chain — from receiving a spoofed email to entering credentials on a fake login page — while logging user actions and visualizing behavior for educational purposes.
 
+**Watch the demo video**: [https://youtu.be/QcUGuFrTsMU](https://youtu.be/QcUGuFrTsMU)
 ---
 
 ## Features
